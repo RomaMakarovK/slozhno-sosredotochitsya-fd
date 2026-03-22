@@ -10,3 +10,9 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image-dark: url(../images/cover-image-dark.png);
+  }
+}

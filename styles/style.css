@@ -1,5 +1,122 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-image-light);
+  background-size: cover; /*закрывает родителя*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(0, 0, 128);
+}
+
+.header {
+  position: relative;
+  height: 100vh; /*равно высоте брауз. окна*/
+  min-height: 668px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.rec {
+  position: absolute;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FF0070;
+  justify-self: end;
+  margin-inline: 19px;
+  width: 33px;
+  height: 26px;
+}
+
+.rec::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  margin-inline: 10px;
+  margin-block: 8px;
+  inline-size: 9px;
+  block-size: 9px;
+  background: #FF0070;
+  box-shadow: 0px 0px 4px 2px #FF0070;
+  border-radius: 50%;
+}
+
+.header__theme-menu-list {
+  justify-self: end;
+  margin-block: 39px;
+  margin-inline: 10px;
+}
+
+.header__theme-menu-item {
+box-sizing: border-box; /*?*/
+display: flex;
+flex-direction: row;
+justify-content: center; /**/
+align-items: center; /**/
+padding: 0px 13px; /**/
+width: 44px;
+height: 23px;
+font-family: 'IBM Plex Mono', sans-serif;
+font-size: 18px;
+line-height: 18px;
+text-align: center;
+color: #FF0070;
+}
+
+.header__theme-menu-button {
+font-family: 'IBM Plex mono', sans-serif;
+color: #FF0070;
+border: none;
+background-color: transparent;
+
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px 13px;
+position: absolute;
+width: 70px;
+height: 26px;
+left: 295px;
+top: 75px;
+}
+
+.title-decor {
+  white-space: pre-line;
+  min-width: 355px;
+  min-height: 192px;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 116px;
+  line-height: 82.5%;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 #FF0070;
+  font-weight: bold;
+}
+
+.header_title {
+  white-space: pre-line;
+  min-width: 355px;
+  max-height: 117px;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000028;
+  background-color: #FF0070;
+}
+
+@media (prefers-color-scheme: dark) {
+    .page {
+        background-image: var(--bg-image-dark);
+    }
+}
+
+:root.theme-light .page {
+    background-image: var(--bg-image-light, url('../images/cover-image-light.png'));
+}
+
+:root.theme-dark .page {
+    background-image: var(--bg-image-dark, url('../images/cover-image-dark.png'));
 }
