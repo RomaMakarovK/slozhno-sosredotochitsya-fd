@@ -26,8 +26,8 @@
   content: "";
   /*место не пустует, позиц. относит. html или род.*/
   position: absolute;
-  inline-size: 25px;/*часть уголочка вверху и снизу*/
-  block-size: 25px;
+  inline-size: 25px;
+  block-size: 25px;/*часть уголочка вверху и снизу*/
 }
 
 .decorated-zone::before {
@@ -155,18 +155,17 @@
 }
 
 .section_title {
+  margin-bottom: 20px;
+  color: var(--title-accent-color);
   font-family: 'IBM Plex Mono';
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: var(--title-accent-color);
-  margin-bottom: 20px;
 }
 
 .section_content {
   display: grid;
   gap: 20px;
-  margin-bottom: 50px;
 }
 
 .card {
@@ -175,21 +174,12 @@
   gap: 10px;
 }
 
-.title-decor {
-  font-family: 'IBM Plex Mono';
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
-  background-color: var(--accent-color);
-  color: var(--text-font-color);
-}
-
 .section_card-description {
+  color: var(--text-color);
   font-family: 'IBM Plex Mono';
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  color: var(--text-color);
 }
 
 .multicolored_link {
@@ -324,11 +314,11 @@
   .gallery_content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
     grid-template-areas:
       "one one two"
       "three four two"
       "three five five";
+    gap: 20px;
   }
 
   .gallery-image {
