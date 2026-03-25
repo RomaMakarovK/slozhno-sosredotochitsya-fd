@@ -1,5 +1,5 @@
 /* Глобальные стили для проекта, их можно дополнять и менять по желанию */
-
+/*
 *,
 *::before,
 *::after {
@@ -37,6 +37,57 @@ button,
 a {
   color: currentColor;
   font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "IBM Plex Mono", monospace;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+picture {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+span,
+a {
+  color: currentColor;
+  font-weight: 400;
   font-size: inherit;
   line-height: inherit;
 }
