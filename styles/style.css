@@ -54,7 +54,7 @@
   text-align: center;
 }
 
-.header__decor::before {
+.header_decor::before {
   content: "";
   position: absolute;
   top: 8px;
@@ -203,10 +203,14 @@
 
 .section_gallery {
   display: grid;
- /* grid-template-columns: auto;*/
   gap: 10px;
   margin-block-end: 40px;
   padding-inline: var(--basic-padding);
+}
+
+.gallery_content {
+  display: grid;
+  gap: 10px;
 }
 
 .gallery-image {
@@ -256,8 +260,6 @@
 
   .header__theme-menu {
     margin-inline-end: 20px;
-    margin-block-start: 192px;
-    margin-block-end: 173px;
   }
 
   .main {
